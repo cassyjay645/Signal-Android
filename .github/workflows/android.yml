@@ -31,6 +31,8 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew qa --parallel
+      
+    - run: ls -R app/build/outputs
 
     - name: Archive reports for failed build
       if: ${{ failure() }}
